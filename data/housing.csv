@@ -1,11 +1,7 @@
 import random
 from pathlib import Path
-
-
 OUT = Path("data/housing.csv")
 OUT.parent.mkdir(parents=True, exist_ok=True)
-
-
 with open(OUT, "w", newline="") as f:
 writer = csv.writer(f)
 writer.writerow(["sqft", "bedrooms", "bathrooms", "price"])
@@ -17,6 +13,4 @@ bathrooms = random.randint(1, 5)
 price = 50 * sqft + 20000 * bedrooms + 15000 * bathrooms + random.gauss(0, 30000)
 price = max(10000, int(price))
 writer.writerow([sqft, bedrooms, bathrooms, price])
-
-
 print(f"Synthetic data written to {OUT}")
