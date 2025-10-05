@@ -1,9 +1,5 @@
 # SCT_ML_1
 # House Price Linear Regression 
-
-Repository scaffold and all code files you can copy directly to GitHub.
-
-```
 house-price-linear-regression/
 ├── README.md
 ├── requirements.txt
